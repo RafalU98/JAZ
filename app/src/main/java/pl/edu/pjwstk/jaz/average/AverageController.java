@@ -19,12 +19,12 @@ public class AverageController {
         String[] num = numbers.split(",");
 
         double sum = 0;
-        double number = 0;
 
         for(String i : num) sum += Integer.parseInt(i);
 
         BigDecimal round = new BigDecimal(sum / num.length);
-        round = round.setScale(2, RoundingMode.HALF_UP).stripTrailingZeros();
+        round = round.setScale(2,
+                RoundingMode.HALF_UP).stripTrailingZeros();
 
        return new AverageResult ("Average equals: " + round);
     }

@@ -1,9 +1,10 @@
-package pl.edu.pjwstk.jaz;
+package pl.edu.pjwstk.jaz.readiness;
 
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
+import pl.edu.pjwstk.jaz.IntegrationTest;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -22,12 +23,5 @@ public class ExampleTest {
                     .statusCode(200);
         // @formatter:on
 
-        var response = given()
-                .when()
-                .get("/api/is-ready")
-                .thenReturn();
-        var statusCode = response.getStatusCode();
-
-        assertThat(statusCode).isEqualTo(200);
     }
 }
