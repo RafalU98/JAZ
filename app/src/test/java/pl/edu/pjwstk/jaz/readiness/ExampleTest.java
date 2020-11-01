@@ -13,6 +13,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ExampleTest {
     @Test
     public void should_respond_to_readiness_request() {
+
+        // @formatter:off
+        given()
+                .when()
+                .get("/api/is-ready")
+                .then()
+                    .statusCode(200);
+        // @formatter:on
+
         var response = given()
                 .when()
                 .get("/api/is-ready")
