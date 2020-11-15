@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz.average;
+package pl.edu.pjwstk.jaz.Zadanie1;
 
 
 

@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz.readiness;
+package pl.edu.pjwstk.jaz.Zadanie1;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

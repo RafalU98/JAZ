@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz;
+package pl.edu.pjwstk.jaz.Zadanie1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestContext;
@@ -11,8 +11,8 @@ public class TestContextHolder implements TestExecutionListener {
     public void beforeTestClass(TestContext testContext) {
         applicationContext.set(testContext.getApplicationContext());
     }
-
+/*
     public static <T> T getBean(Class<T> requiredType) {
         return applicationContext.get().getBean(requiredType);
-    }
+    }*/
 }

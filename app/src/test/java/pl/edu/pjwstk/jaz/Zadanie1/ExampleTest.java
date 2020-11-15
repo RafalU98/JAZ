@@ -1,13 +1,11 @@
-package pl.edu.pjwstk.jaz.readiness;
-
+package pl.edu.pjwstk.jaz.Zadanie1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
-import pl.edu.pjwstk.jaz.IntegrationTest;
 
 import static io.restassured.RestAssured.given;
-import static org.assertj.core.api.Assertions.assertThat;
+
 
 @RunWith(SpringRunner.class)
 @IntegrationTest
@@ -17,11 +15,10 @@ public class ExampleTest {
 
         // @formatter:off
         given()
-                .when()
+        .when()
                 .get("/api/is-ready")
-                .then()
-                    .statusCode(200);
+        .then()
+                .statusCode(200);
         // @formatter:on
-
     }
 }
