@@ -2,8 +2,7 @@ package pl.edu.pjwstk.jaz.Examples;
 
 
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
-import pl.edu.pjwstk.jaz.Zadanie2.UserSession;
+import pl.edu.pjwstk.jaz.Task2.UserSession;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Component
+
 public class ExampleFilter  extends HttpFilter {
     private final UserSession userSession;
 
@@ -20,7 +19,7 @@ public class ExampleFilter  extends HttpFilter {
         this.userSession = userSession;
     }
 
-    //@Override
+    @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         if (isUserLogged() || isSiteAllowed(request)) {
             chain.doFilter(request,response);

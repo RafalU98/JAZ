@@ -1,8 +1,8 @@
-package pl.edu.pjwstk.jaz.Zadanie2;
+package pl.edu.pjwstk.jaz.Task1;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.edu.pjwstk.jaz.Zadanie1.Test1Entity;
+import pl.edu.pjwstk.jaz.Examples.Test1Entity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -15,8 +15,12 @@ public class AppWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapte
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                //.antMatchers("employee/me").authenticated()
-                .antMatchers("/*").permitAll();
+                .antMatchers("/login").permitAll()
+                .antMatchers("/register").permitAll()
+                .antMatchers("/auth0/**").permitAll()
+                        // co kolwiek jest przez auth0 to przepuszcamy bo osobny filtr (ExampleFilter)
+                .anyRequest().authenticated()
+                .and().csrf().disable();
         }
 }
 

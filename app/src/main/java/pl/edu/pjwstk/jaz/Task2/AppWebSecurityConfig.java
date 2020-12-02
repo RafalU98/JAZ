@@ -10,6 +10,8 @@ import pl.edu.pjwstk.jaz.Examples.ExampleFilter;
 @Configuration
 public class AppWebSecurityConfig {
 
+
+    //methoda tworząca
     @Bean
     public FilterRegistrationBean<ExampleFilter> exampleFilter(UserSession userSession){
         FilterRegistrationBean<ExampleFilter> registrationBean = new FilterRegistrationBean<>();

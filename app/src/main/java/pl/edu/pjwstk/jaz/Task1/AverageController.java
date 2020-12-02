@@ -20,12 +20,9 @@ public class AverageController {
 
         double sum = 0;
 
-        for (int j = 0; j < num.length; j++) {
-            String i = num[j];
+        for (String i : num) {
             sum += Integer.parseInt(i);
         }
-
-
 
         BigDecimal roundingAverage = new BigDecimal(sum / num.length);
         roundingAverage = roundingAverage.setScale(2, RoundingMode.HALF_UP).stripTrailingZeros();
