@@ -2,7 +2,7 @@ package pl.edu.pjwstk.jaz.Task1;
 
 import io.restassured.http.ContentType;
 import org.junit.BeforeClass;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
